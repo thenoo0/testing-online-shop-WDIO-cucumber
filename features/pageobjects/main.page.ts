@@ -1,14 +1,15 @@
-import { $ } from '@wdio/globals'
+import { $, browser } from '@wdio/globals'
 import Page from './page.js';
+
 
 /**
  * sub page containing specific selectors and methods for a specific page
  */
 class MainPage extends Page {
     /**
-     * define selectors using getter methods
+     * define selectors using getter methodss
      */
-    get inputUsername () {
+    get inputUsername() {
         return $('#username');
     }
 
@@ -17,7 +18,7 @@ class MainPage extends Page {
     /**
      * overwrite specific options to adapt it to page object
      */
-    open () {
+    open() {
         return super.open('');
     }
 }
